@@ -30,23 +30,26 @@
       flex: 1;
       min-height: 100vh;
       align-items: center;
-      background: #320846 url(bg-main.jpg);
+      background: #320846 url(bg.jpg);
       background-size: cover;
     }
 
     .clock {
       width: 30rem;
       height: 30rem;
-      border: 20px solid white;
+      border: 20px  whitesmoke;
       border-radius: 2rem;
       margin: 50px auto;
       position: relative;
       padding: 2rem;
-      box-shadow:
-        0 0 0 4px rgba(0,0,0,0.1),
-        inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 1px 0 0 rgb(225 131 194 / 25%), 
+                  0 -1px 0 0 rgb(165 181 222 / 25%), 
+                  1px 0 0 0 rgb(225 131 194 / 25%), 
+                  -1px 0 0 0 rgb(165 181 222 / 25%),
+                  1px -1px 0 0 rgb(195 156 208 / 50%),
+                  -1px 1px 0 0 rgb(195 156 208 / 50%), 
+                  1px 1px 0 0 rgb(255 105 180 / 75%), 
+                  -1px -1px 0 0 rgb(135 206 235 / 75%);
     }
 
     .clock-face {
@@ -54,22 +57,37 @@
       width: 100%;
       height: 100%;
       transform: translateY(-3px); /* account for the height of the clock hands */
+      border-radius: 2rem;
     }
 
     .hand {
       width: 50%;
       height: 6px;
-      background: black;
+      background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
       position: absolute;
       top: 50%;
       transform-origin: 100%;
       transform: rotate(90deg);
       transition: all 0.05s;
       transition-timing-function: ease-in-out;
-    }
-
-    .second-hand, .min-hand, .hour-hand{
-        
+      box-shadow: 0 1px 0 0 rgb(225 131 194 / 25%), 
+                  0 -1px 0 0 rgb(165 181 222 / 25%), 
+                  1px 0 0 0 rgb(225 131 194 / 25%), 
+                  -1px 0 0 0 rgb(165 181 222 / 25%),
+                  1px -1px 0 0 rgb(195 156 208 / 50%),
+                  -1px 1px 0 0 rgb(195 156 208 / 50%), 
+                  1px 1px 0 0 rgb(255 105 180 / 75%), 
+                  -1px -1px 0 0 rgb(135 206 235 / 75%);
     }
 
   </style>
